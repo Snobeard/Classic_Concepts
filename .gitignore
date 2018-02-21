@@ -1,0 +1,7 @@
+## Sass
+.sass-cache/
+sass/
+main.css.map
+
+## Notes / Setup
+notes.txt
