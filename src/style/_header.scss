@@ -1,0 +1,38 @@
+header {
+  background-color: $purple;
+  
+  nav {
+    
+    ul {
+      padding: .3em 0;
+      text-align: center;
+      
+      li {
+        margin: 0 0.2em;
+        font-size: 1.2em;
+        display: inline-block;
+        border: 2px outset $purple / 1.2;
+        border-radius: 10%;
+        background: linear-gradient($purple * $button-intensity * 0.8, $purple, $purple / $button-intensity * 0.8);
+        
+        
+        &:hover {
+          background: linear-gradient($purple * $button-intensity, $purple, $purple / $button-intensity);
+        }
+
+        &:active {
+          background: linear-gradient($purple / $button-intensity, $purple, $purple / $button-intensity);
+          border: 2px inset $purple / 1.2;
+          
+        }
+        
+        a {
+          display: block;
+          padding: 0.2em 0.4em;
+          color: rgb(255, 255, 255);
+          
+        }
+      }
+    }
+  }
+}

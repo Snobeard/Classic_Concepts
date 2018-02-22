@@ -7,4 +7,5 @@ import './style/main.scss';
 const container = document.createElement('div');
 document.body.appendChild(container);
 container.id = 'container';
+
 ReactDOM.render(<App />, container);
