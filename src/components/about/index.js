@@ -3,6 +3,27 @@ import React from 'react';
 //TODO: add personal photos?
 
 class About extends React.Component {
+  componentDidMount() {
+    let section = document.querySelector('#about');
+
+    // mattL - setTimeout is necessary to allow the page to render the transition
+    setTimeout(() => {
+      section.classList.add('fade-in');
+    }, 10);
+
+    let aboutUs = document.querySelector('#navigation .about a');
+    aboutUs.classList.add('active');
+  }
+
+  // mattL - remove the class so it will fade-in on next selection
+  componentWillUnmount() {
+    let section = document.querySelector('#about');
+    section.classList.remove('fade-in');
+
+    let aboutUs = document.querySelector('#navigation .about a');
+    aboutUs.classList.remove('active');
+  }
+
   render() {
     return (
       <section id='about'>

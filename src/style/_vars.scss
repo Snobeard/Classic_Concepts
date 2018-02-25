@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
-
-@mixin transition($transition...) {
-  -moz-transition:    $transition;
-  -o-transition:      $transition;
-  -webkit-transition: $transition;
-  transition:         $transition;
-}
-
+// colors
 $main-background: rgb(34, 144, 255);
 $background: rgb(255, 245, 255);
 $light-gray: rgb(153, 153, 153);
+
+// button
 $button-intensity: 1.2;
 
 // fonts 
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
 $cursive: 'Dancing Script', cursive;

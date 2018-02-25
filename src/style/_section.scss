@@ -1,14 +1,8 @@
 // used to fade-in the section
 section {
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  @include transition(1s);
   opacity: 0;
-  visibility: hidden;
 }
-
-section.show {
+section.fade-in {
   opacity: 1;
-  visibility: visible; 
 }

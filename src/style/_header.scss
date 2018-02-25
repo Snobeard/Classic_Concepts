@@ -11,16 +11,6 @@ header {
         margin: 0 0.2em;
         font-size: 1.2em;
         display: inline-block;
-        border-bottom: 3px solid rgba(153, 153, 153, 0);
-        @include transition(0.5s);
-        
-        &:hover {
-          border-bottom: 3px solid $light-gray;
-        }
-        
-        &:active {
-          
-        }
         
         a {
           font-family: $cursive;
@@ -29,10 +19,17 @@ header {
           padding: 0.1em 0.3em;
           color: $light-gray;
           @include transition(0.5s);
+          border-bottom: 3px solid transparent;
           
           &:hover {
+            border-bottom: 3px solid $light-gray;
             color: $light-gray / 1.5;
           }
+        }
+
+        a.active {
+          border-bottom: 3px solid $light-gray;
+          color: $light-gray / 1.5;
         }
       }
     }
