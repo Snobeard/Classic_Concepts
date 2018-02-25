@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import Home from '../home';
 import About from '../about';
-import catchAll from '../catch-all';
 import Header from '../header';
+import catchAll from '../catch-all';
 
 class App extends React.Component {
   render() {
