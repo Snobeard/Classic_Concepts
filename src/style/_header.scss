@@ -1,25 +1,33 @@
 header {
   background-color: $background;
+  height: 100px;
+
+  img {
+    height: 100%;
+    margin-left: 2%;
+  }
   
   nav {
+    float: right;
+    margin-top: 28px;
+    margin-right: 50px;
     
     ul {
-      padding: .3em 0;
-      text-align: right;
-      
       li {
-        margin: 0 0.2em;
+        // link spacing
+        margin: 0 0.5em;
         font-size: 1.2em;
         display: inline-block;
         
         a {
           font-family: $cursive;
-          font-size: 1.8em;
+          font-size: 1.4em;
           display: block;
           padding: 0.1em 0.3em;
           color: $light-gray;
           @include transition(0.5s);
           border-bottom: 3px solid transparent;
+          // text-transform: lowercase; // TODO: decide on lower or uppercase
           
           &:hover {
             border-bottom: 3px solid $light-gray;

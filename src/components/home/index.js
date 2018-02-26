@@ -1,7 +1,5 @@
 import React from 'react';
 
-import lakeridge from '../../images/lakeridge-logo.jpg';
-
 class Home extends React.Component {
   componentDidMount() {
     let section = document.querySelector('#home');
@@ -28,7 +26,6 @@ class Home extends React.Component {
     return (
       <section id='home'>
         <h1>Classic Concepts Fine Homes</h1>
-        <img src={lakeridge} alt='Lakeridge Logo' height='150px' />
       </section>
     );
   }

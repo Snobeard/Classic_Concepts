@@ -18,7 +18,8 @@ class App extends React.Component {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/about' component={About}/>
-              <Route component={catchAll} />
+              {/* TODO: finish nav paths */}
+              <Route component={catchAll} /> 
             </Switch>
           </article>
 
