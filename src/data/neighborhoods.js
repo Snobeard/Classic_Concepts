@@ -1,6 +1,7 @@
 // images
 import highlineLogo from '../images/highline-logo.png';
 
+// neighborhoods
 export default {
   'highline-station' : {
     title : 'Highline Station',

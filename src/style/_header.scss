@@ -1,20 +1,20 @@
 header {
   background-color: $background;
-  height: 100px;
+  height: $nav-height;
 
   img {
     height: 100%;
-    margin-left: 2%;
   }
   
   nav {
     float: right;
-    margin-top: 28px;
-    margin-right: 50px;
+    margin-top: $nav-height * 0.3;
+    text-align: right;
     
     ul {
+      
       li {
-        // link spacing
+        // nav-link spacing
         margin: 0 0.5em;
         font-size: 1.2em;
         display: inline-block;

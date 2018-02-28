@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './components/app';
+import favicon from './images/favicon.ico';
 import './style/main.scss';
 
 const container = document.createElement('div');

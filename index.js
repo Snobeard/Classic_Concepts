@@ -6,9 +6,6 @@ const express = require('express');
 const app = express();
 const favicon = require('serve-favicon');
 
-// Serve favicon
-app.use(favicon(`${__dirname}/src/images/favicon.ico`)); // TODO: change favicon
-
 // Static mounts
 app.use(express.static(`${__dirname}/build`));
 
