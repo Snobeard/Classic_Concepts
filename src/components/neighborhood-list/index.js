@@ -1,6 +1,7 @@
 import React from 'react';
+import neighborhoodData from '../../data/neighborhoods';
 
-class Neighborhoods extends React.Component {
+class NeighborhoodsList extends React.Component {
   componentDidMount() {
     let section = document.querySelector('#neighborhoods');
 
@@ -9,8 +10,8 @@ class Neighborhoods extends React.Component {
       section.classList.add('fade-in');
     }, 10);
 
-    let neighborhoods = document.querySelector('#navigation .neighborhoods a');
-    neighborhoods.classList.add('active');
+    let navLink = document.querySelector('#navigation .neighborhoods a');
+    navLink.classList.add('active');
   }
 
   // mattL - remove the class so it will fade-in on next selection
@@ -18,8 +19,8 @@ class Neighborhoods extends React.Component {
     let section = document.querySelector('#neighborhoods');
     section.classList.remove('fade-in');
 
-    let neighborhoods = document.querySelector('#navigation .neighborhoods a');
-    neighborhoods.classList.remove('active');
+    let navLink = document.querySelector('#navigation .neighborhoods a');
+    navLink.classList.remove('active');
   }
   
   render() {
@@ -31,4 +32,5 @@ class Neighborhoods extends React.Component {
   }
 }
 
-export default Neighborhoods;
+export default NeighborhoodsList;
+

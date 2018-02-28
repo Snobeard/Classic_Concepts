@@ -11,8 +11,8 @@ class About extends React.Component {
       section.classList.add('fade-in');
     }, 10);
 
-    let aboutUs = document.querySelector('#navigation .about a');
-    aboutUs.classList.add('active');
+    let navLink = document.querySelector('#navigation .about a');
+    navLink.classList.add('active');
   }
 
   // mattL - remove the class so it will fade-in on next selection
@@ -20,8 +20,8 @@ class About extends React.Component {
     let section = document.querySelector('#about');
     section.classList.remove('fade-in');
 
-    let aboutUs = document.querySelector('#navigation .about a');
-    aboutUs.classList.remove('active');
+    let navLink = document.querySelector('#navigation .about a');
+    navLink.classList.remove('active');
   }
 
   render() {

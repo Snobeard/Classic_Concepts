@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from '../home';
 import About from '../about';
-import Neighborhoods from '../neighborhoods';
+import NeighborhoodList from '../neighborhood-list';
 import Header from '../header';
 import catchAll from '../catch-all';
 
@@ -19,7 +19,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/about' component={About}/>
-              <Route exact path='/neighborhoods' component={Neighborhoods}/>
+              <Route exact path='/neighborhoods' component={NeighborhoodList}/>
               {/* TODO: finish nav paths */}
               <Route component={catchAll} /> 
             </Switch>
