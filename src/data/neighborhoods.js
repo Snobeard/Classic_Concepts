@@ -26,7 +26,6 @@ export default [
     title : 'Second Station',
     logo : highlineLogo,
     address : '2nd east Court, Kent WA',
-    subText : '72 lots',
     description : '72 single family condos. and things',
     houses : [
       {

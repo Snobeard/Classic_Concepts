@@ -1,8 +1,0 @@
-// used to fade-in the section
-section {
-  @include transition(1s);
-  opacity: 0;
-}
-section.fade-in {
-  opacity: 1;
-}

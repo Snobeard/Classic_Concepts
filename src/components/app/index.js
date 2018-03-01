@@ -13,18 +13,22 @@ class App extends React.Component {
       <BrowserRouter>
         <React.Fragment>
 
+          {/* Header */}
           <Header />
 
-          <article>
+          {/* Articles */}
+          <React.Fragment>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/about' component={About}/>
-              <Route exact path='/neighborhoods' component={NeighborhoodList}/>
+              <Route path='/about' component={About}/>
+              <Route path='/neighborhoods' component={NeighborhoodList}/>
               {/* TODO: finish nav paths */}
-              <Route component={catchAll} /> 
+              {/* <Route component={catchAll} />  */}
             </Switch>
-          </article>
+          </React.Fragment>
 
+
+          {/* TODO: Footer */}
         </React.Fragment>
       </BrowserRouter>
     );

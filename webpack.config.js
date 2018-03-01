@@ -18,6 +18,7 @@ webPackConfig.entry = `${__dirname}/src/main.js`;
 webPackConfig.output = {
   filename : 'bundle.[hash].js',
   path : `${__dirname}/build`,
+  publicPath : '/', // mattL - needed to load the bundle from any page route
 };
 
 webPackConfig.plugins = [

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
 
+import neighborhoodData from '../../data/neighborhoods';
 import lakeridge from '../../images/lakeridge-logo.jpg';
 
 class Header extends React.Component {
@@ -18,6 +19,19 @@ class Header extends React.Component {
             <li className='we-buy-land'><Link to='/we-buy-land'>We Buy Land</Link></li>
             <li className='about'><Link to='/about'>About Us</Link></li>
             <li className='contact'><Link to='/contact'>Contact Us</Link></li>
+
+            {/* build neighborhoods list */}
+            <ul>
+              {neighborhoodData.map((eachNeighborhood, index) => {
+                let { title } = eachNeighborhood;
+                let route = title.trim().toLowerCase().replace(/\s+/, '-');
+                return (
+                  <li key={index}>
+                    <Link to={`/neighborhoods/${route}`} >{title}</Link>
+                  </li>
+                );
+              })}
+            </ul>
           </ul>
         </nav>
       </header>

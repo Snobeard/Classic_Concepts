@@ -2,11 +2,11 @@ import React from 'react';
 
 class Home extends React.Component {
   componentDidMount() {
-    let section = document.querySelector('#home');
+    let article = document.querySelector('#home');
 
-    // mattL - setTimeout is necessary to allow the page to render the section
+    // mattL - setTimeout is necessary to allow the page to render the article
     setTimeout(() => {
-      section.classList.add('fade-in');
+      article.classList.add('fade-in');
     }, 10);
 
     let navLink = document.querySelector('#navigation .home a');
@@ -15,8 +15,8 @@ class Home extends React.Component {
 
   // mattL - remove the class so it will fade-in on next selection
   componentWillUnmount() {
-    let section = document.querySelector('#home');
-    section.classList.remove('fade-in');
+    let article = document.querySelector('#home');
+    article.classList.remove('fade-in');
 
     let navLink = document.querySelector('#navigation .home a');
     navLink.classList.remove('active');
@@ -24,9 +24,9 @@ class Home extends React.Component {
   
   render() {
     return (
-      <section id='home'>
+      <article id='home'>
         <h1>Classic Concepts Fine Homes</h1>
-      </section>
+      </article>
     );
   }
 }

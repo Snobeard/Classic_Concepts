@@ -4,11 +4,11 @@ import React from 'react';
 
 class About extends React.Component {
   componentDidMount() {
-    let section = document.querySelector('#about');
+    let article = document.querySelector('#about');
 
     // mattL - setTimeout is necessary to allow the page to render the transition
     setTimeout(() => {
-      section.classList.add('fade-in');
+      article.classList.add('fade-in');
     }, 10);
 
     let navLink = document.querySelector('#navigation .about a');
@@ -17,8 +17,8 @@ class About extends React.Component {
 
   // mattL - remove the class so it will fade-in on next selection
   componentWillUnmount() {
-    let section = document.querySelector('#about');
-    section.classList.remove('fade-in');
+    let article = document.querySelector('#about');
+    article.classList.remove('fade-in');
 
     let navLink = document.querySelector('#navigation .about a');
     navLink.classList.remove('active');
@@ -26,7 +26,7 @@ class About extends React.Component {
 
   render() {
     return (
-      <section id='about'>
+      <article id='about'>
         <h1>About Us</h1>
         <p>
           {`
@@ -45,7 +45,7 @@ class About extends React.Component {
           With every new development, Classic Concepts refines the art of home building. Beautiful colors, inviting textures, fine materials, and attractive landscaping are standard features of every home. In addition, Classic Concepts homes can be customized with special touches to fit your particular lifestyle. So not only is a Classic Concepts home a sound investment, it's truly a homeowners dream come true. We believe that's what being a classic is all about.
           `}
         </p>
-      </section>
+      </article>
     );
   }
 }
