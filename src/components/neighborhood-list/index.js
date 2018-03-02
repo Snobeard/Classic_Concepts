@@ -28,10 +28,32 @@ class NeighborhoodsList extends React.Component {
   render() {
     return (
       <article id='neighborhoods'>
-        <Route exact path='/neighborhoods' render={() => (
-          <h1>Current Neighborhoods</h1>
-        )}/>
 
+        {/* Displaying neighborhoods and header */}
+        <Route exact path='/neighborhoods' render={() => (
+          <React.Fragment>
+            <h1>Current Neighborhoods</h1>
+            {
+              neighborhoodData.map((eachNeighborhood, index) => {
+                let { logo, title, address, subText } = eachNeighborhood;
+                // mattL - format: 'Example Neighborhood' -> 'example-neighborhood'
+                let route = title.trim().toLowerCase().replace(/\s+/, '-');
+                return (
+                  <Link to ={`/neighborhoods/${route}`} id={'neighborhood-' + (index + 1)} className='neighborhood'
+                    key={index}>
+                    <React.Fragment>
+                      <img src={logo} alt={`${title}'s logo`} />
+                      <h4>{title}</h4>
+                      <p>{address}</p>
+                      <p>{subText}</p>
+                    </React.Fragment>
+                  </Link>
+                );
+              })
+            }
+          </React.Fragment>
+        )}/>
+        
         {/* Setup neighborhood routes */}
         {neighborhoodData.map((eachNeighborhood, index) => {
           let { title, description, houses } = eachNeighborhood;
@@ -41,25 +63,6 @@ class NeighborhoodsList extends React.Component {
             />
           );
         })}
-
-        <Route exact path='/neighborhoods' render={() => (
-          neighborhoodData.map((eachNeighborhood, index) => {
-            let { logo, title, address, subText } = eachNeighborhood;
-            // mattL - format: 'Example Neighborhood' -> 'example-neighborhood'
-            let route = title.trim().toLowerCase().replace(/\s+/, '-');
-            return (
-              <Link to ={`/neighborhoods/${route}`} id={'neighborhood-' + (index + 1)} className='neighborhood'
-                key={index}>
-                <React.Fragment>
-                  <img src={logo} alt={`${title}'s logo`} />
-                  <h4>{title}</h4>
-                  <p>{address}</p>
-                  <p>{subText}</p>
-                </React.Fragment>
-              </Link>
-            );
-          })
-        )}/>
         
       </article>
     );
