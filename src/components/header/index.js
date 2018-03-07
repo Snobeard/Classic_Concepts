@@ -21,12 +21,12 @@ class Header extends React.Component {
             <li className='contact'><Link to='/contact'>Contact Us</Link></li>
 
             {/* build neighborhoods list */}
-            <ul>
+            <ul id='sub-nav'>
               {neighborhoodData.map((eachNeighborhood, index) => {
                 let { title } = eachNeighborhood;
                 let route = title.trim().toLowerCase().replace(/\s+/, '-');
                 return (
-                  <li key={index}>
+                  <li key={index} className={route}>
                     <Link to={`/neighborhoods/${route}`} >{title}</Link>
                   </li>
                 );

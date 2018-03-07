@@ -17,12 +17,18 @@ class FloorPlan extends React.Component {
   }
   
   render() {
-    // let {} = this.props;
-    console.log(this.props);
+    let { neighborhood, house, images } = this.props;
+    console.log('IMG', images);
     
     return (
       <article id='floor-plan'>
-        <h1>placeholder title</h1>
+        <p>Return to {neighborhood}</p>
+        <h2>{house}</h2>
+        {
+          images.map((eachPlan, index) =>
+            <img key={index} src={eachPlan} alt={`floor-plan-${index + 1}`} />
+          )
+        }
       </article>
     );
   }

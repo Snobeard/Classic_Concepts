@@ -77,7 +77,6 @@ class NeighborhoodsList extends React.Component {
             />
           );
         })}
-        
       </article>
     );
   }
