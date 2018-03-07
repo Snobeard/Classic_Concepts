@@ -8,7 +8,9 @@ class Header extends React.Component {
   render() {
     return(
       <header>
-        <img src={lakeridge} alt='Lakeridge Logo' />
+        <Link to='/' >
+          <img src={lakeridge} alt='Lakeridge Logo' />
+        </Link>
         
         <nav>
           <ul id='navigation'>
