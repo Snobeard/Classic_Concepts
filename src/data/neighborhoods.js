@@ -11,7 +11,7 @@ export default [
     description : '27 single family condos. This new neighborhood is closed in to freeways, shopping, entertainment, and dining. Upgrades are available.',
     houses : [
       {
-        title : 'house #1',
+        title : 'house 1',
         squareFeet : '2,000 sq. ft, 2 Story',
         amenities : '3 bed, 2.5 bath, 2 car garage',
         'floor-plan' : [ // images
@@ -19,7 +19,7 @@ export default [
         ],
       },
       {
-        title : 'house #2',
+        title : 'house 2',
         squareFeet : '20,000 sq. ft, 10 Story',
         amenities : '15 bed, 25 bath, 12 car garage',
         'floor-plan' : [ // images
@@ -35,7 +35,7 @@ export default [
     description : '72 single family condos. and things',
     houses : [
       {
-        title : 'house #1',
+        title : 'house 1',
         squareFeet : '1,000 sq. ft, 2 Story',
         amenities : '5 bed, 2.5 bath, 2 car garage',
         'floor-plan' : [
@@ -43,7 +43,7 @@ export default [
         ],
       },
       {
-        title : 'house #2',
+        title : 'house 2',
         squareFeet : '30 sq. ft, 10 Story',
         amenities : '0.125 bed, 0.4 bath, 0.0001 car garage',
         'floor-plan' : [

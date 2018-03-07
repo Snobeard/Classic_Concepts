@@ -36,11 +36,14 @@ class NeighborhoodsList extends React.Component {
             {
               neighborhoodData.map((eachNeighborhood, index) => {
                 let { logo, title, address, subText } = eachNeighborhood;
-                // mattL - format: 'Example Neighborhood' -> 'example-neighborhood'
-                let route = title.trim().toLowerCase().replace(/\s+/, '-');
+                let route = title.trim().toLowerCase().replace(/\s+/, '-'); // 'Example Neighborhood' => 'example-neighborhood'
                 return (
-                  <Link to ={`/neighborhoods/${route}`} id={'neighborhood-' + (index + 1)} className='neighborhood'
-                    key={index}>
+                  <Link 
+                    to={`/neighborhoods/${route}`} 
+                    id={'neighborhood-' + (index + 1)} 
+                    className='neighborhood'
+                    key={index}
+                  >
                     <React.Fragment>
                       <img src={logo} alt={`${title}'s logo`} />
                       <h4>{title}</h4>
@@ -57,9 +60,20 @@ class NeighborhoodsList extends React.Component {
         {/* Setup neighborhood routes */}
         {neighborhoodData.map((eachNeighborhood, index) => {
           let { title, description, houses } = eachNeighborhood;
-          let route = title.trim().toLowerCase().replace(/\s+/, '-');
+          let route = title.trim().toLowerCase().replace(/\s+/, '-'); // 'Example Neighborhood' => 'example-neighborhood'
           return (
-            <Route key={index} path={`/neighborhoods/${route}`} render={() => <Neighborhood neighborhoodID={index + 1} title={title} description={description} houses={houses} />}
+            <Route 
+              key={index} 
+              path={`/neighborhoods/${route}`} 
+              render={() => 
+
+                <Neighborhood
+                  neighborhoodID={index + 1}
+                  title={title}
+                  description={description}
+                  houses={houses}
+                  neighborhoodRoute={route}
+                />}
             />
           );
         })}
