@@ -1,6 +1,4 @@
-// images
-import highlineLogo from '../images/highline-logo.png';
-
+// import all images
 function importAll(request) {
   let neighborhood = {
     floorPlans : [],
@@ -19,7 +17,7 @@ function importAll(request) {
 }
 
 // directory to import, subdirectories = true / false, regex file match
-let highline = importAll(require.context('../images/highline', true, /\.(jpg|gif|png)$/)); 
+let highline = importAll(require.context('../images/highline', true, /\.(jpg|jpeg|gif|png)$/)); 
 
 // neighborhoods
 export default [
@@ -48,7 +46,7 @@ export default [
   },
   { // neighborhood 2
     title : 'Second Station',
-    logo : highlineLogo,
+    logo : highline.logo,
     address : '2nd east Court, Kent WA',
     description : '72 single family condos. and things',
     houses : [

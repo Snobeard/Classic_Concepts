@@ -52,7 +52,7 @@ webPackConfig.module = {
     },
     // mattL - image loader
     {
-      test : /\.(jpg|gif|png|svg)$/,
+      test : /\.(jpg|jpeg|gif|png|svg)$/,
       exclude : /\.icon\.svg$/,
       use : [{
         loader : 'url-loader',
