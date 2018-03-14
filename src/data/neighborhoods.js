@@ -4,7 +4,8 @@ function importAll(request) {
     floorPlans : [],
     logo : null,
   };
-
+  console.log('LOADED FILES', request.keys()); // array of loaded files
+  
   request.keys().forEach(key => {
     if (key.match(/\/floor-plans\//)) // match images in the containing folder 'floor-plans'
       neighborhood.floorPlans.push(request(key));
@@ -16,8 +17,8 @@ function importAll(request) {
   return neighborhood; 
 }
 
-// directory to import, subdirectories = true / false, regex file match
-let highline = importAll(require.context('../images/highline', true, /\.(jpg|jpeg|gif|png)$/)); 
+// directory to import, subdirectories = true / false, regex file match 
+let highline = importAll(require.context('../images/', true, /\.(jpg|jpeg|gif|png|txt)$/)); 
 
 // neighborhoods
 export default [

@@ -44,12 +44,12 @@ class NeighborhoodsList extends React.Component {
                     className='neighborhood'
                     key={index}
                   >
-                    <React.Fragment>
-                      <img src={logo} alt={`${title}'s logo`} />
-                      <h4>{title}</h4>
-                      <p>{address}</p>
-                      <p>{subText}</p>
-                    </React.Fragment>
+                    {/* <React.Fragment> TODO: Remove these*/} 
+                    <img src={logo} alt={`${title}'s logo`} />
+                    <h4>{title}</h4>
+                    <p>{address}</p>
+                    <p>{subText}</p>
+                    {/* </React.Fragment> TODO: Remove these*/}
                   </Link>
                 );
               })
