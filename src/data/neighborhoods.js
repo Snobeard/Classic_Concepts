@@ -12,6 +12,13 @@ function importAll(request) {
     
     if (key.match(/\/logo\//)) // match images in the containing folder 'logo'
       neighborhood.logo = request(key);
+
+    if (key.match(/\/neighborhoods\/.+/)) {
+      // console.log(key);
+      console.log(key.match(/\/neighborhoods\/(.+)\//));
+    }
+
+      
   });
   
   return neighborhood; 
