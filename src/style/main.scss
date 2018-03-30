@@ -1,2 +1,5 @@
 @import 'vars'; // allowing global use of variables
-@import 'base'; // setting basic styling 
+@import 'mixins'; // setting up mixins
+@import 'base'; // setting basic styling
+@import 'header'; // setup header styling
+@import 'article'; // setup article styling

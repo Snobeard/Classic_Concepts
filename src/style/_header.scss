@@ -1,0 +1,54 @@
+header {
+  background-color: $background;
+  height: $nav-height;
+  position: relative;
+  box-shadow: 0 1px 7px #525151;
+
+  img {
+    height: 100%;
+  }
+  
+  nav {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translate(0, -50%);
+    text-align: left;
+    margin-left: 200px;
+    
+    ul {
+      
+      li {
+        // nav-link spacing
+        margin: 0 0.5em;
+        font-size: 1.2em;
+        display: inline-block;
+        
+        a {
+          font-family: $cursive;
+          font-size: 1.7vw;
+          display: block;
+          padding: 0.1em 0.3em;
+          color: $light-gray;
+          @include transition(0.5s);
+          border-bottom: 3px solid transparent;
+          // text-transform: lowercase; // TODO: decide on lower or uppercase
+          
+          &:hover {
+            border-bottom: 3px solid $light-gray;
+            color: $light-gray / 1.5;
+          }
+        }
+
+        a.active {
+          border-bottom: 3px solid $light-gray;
+          color: $light-gray / 1.5;
+        }
+      }
+
+      #sub-nav {
+
+      }
+    }
+  }
+}

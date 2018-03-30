@@ -1,0 +1,4 @@
+title: 'Highline Station'
+address: '1506 West Smith Court, Kent WA'
+subText: '27 lots'
+description: '27 single family condos. This new neighborhood is closed in to freeways, shopping, entertainment, and dining. Upgrades are available.'

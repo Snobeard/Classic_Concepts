@@ -1,0 +1,8 @@
+// used to fade-in each page
+article {
+  @include transition(1s);
+  opacity: 0;
+}
+article.fade-in {
+  opacity: 1;
+}
